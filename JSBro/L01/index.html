@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Here will be show Date</h1>
+    <p id="showDate"></p>
+    <button onclick="checkDate()">Date</button>
+    <script>
+      let click = 0;
+      function checkDate() {
+        document.getElementById("showDate").innerHTML = Date();
+        click++;
+        if (click === 3) {
+          alert("Stop Now");
+          const btn = document.querySelector("button");
+          btn.disabled = true;
+        }
+      }
+    </script>
+  </body>
+</html>
